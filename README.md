@@ -46,31 +46,23 @@ The Seller AI agent is **data-driven and strategic**. It aims to maximize profit
 ## Mathematical Strategy
 
 ### Buyer Mathematical Strategy
-The buyer calculates offers based on a fraction of the product’s base market price:
+The buyer calculates offers based on a fraction of the product's base market price:
 
-\[
-\text{Initial Offer} = \min(\text{Base Market Price} \times 0.6, \text{Buyer Budget})
-\]
+Initial Offer = min(Base Market Price × 0.6, Buyer Budget)
 
-During negotiation, the buyer increases its previous offer by up to 10% if the seller’s price is slightly higher:
+During negotiation, the buyer increases its previous offer by up to 10% if the seller's price is slightly higher:
 
-\[
-\text{Next Offer} = \min(\text{Last Offer} \times 1.1, \text{Buyer Budget})
-\]
+Next Offer = min(Last Offer × 1.1, Buyer Budget)
 
-This cautious progression ensures savings while staying within budget limits.  
+This cautious progression ensures savings while staying within budget limits.
 
 ### Seller Mathematical Strategy
 The seller starts with a markup on the base market price:
 
-\[
-\text{Opening Price} = \text{Base Market Price} \times 1.5
-\]
+Opening Price = Base Market Price × 1.5
 
 During negotiation, the seller evaluates the buyer’s offer against its minimum acceptable price. If profitable, it accepts; otherwise, it calculates a counteroffer using:
 
-\[
-\text{Counteroffer} = \max(\text{Min Price}, \text{Buyer Offer} \times 1.05 \text{ to } 1.15)
-\]
+Counteroffer = max(Min Price, Buyer Offer × 1.05 to 1.15)
 
 This ensures the seller maintains profitability while making strategic concessions.
